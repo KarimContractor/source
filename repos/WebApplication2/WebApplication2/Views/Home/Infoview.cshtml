@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Infoview</title>
+</head>
+<body>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.js" type="text/javascript"></script>
+    <script src="~/Scripts/bootstrap.min.js" type="text/javascript"></script>
+
+    <div>
+        <table class="table">
+            <tr class="table-responsive">
+                <td>Name</td>
+                <td>FatherName</td>
+                <td>CNIC</td>
+                <td>Email</td>
+                <td>Contact</td>
+                
+            </tr>
+            <tr>
+                <td>@ViewBag.name</td>
+                <td>@ViewBag.fname</td>
+                <td>@ViewBag.cnic</td>
+                <td>@ViewBag.email</td>
+                <td>@ViewBag.contact</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

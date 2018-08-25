@@ -1,0 +1,32 @@
+﻿@model IEnumerable<AjaxConn.country>
+@{
+    ViewBag.Title = "Home Page";
+}
+<div class="">
+    <script>
+
+        function getstate(countryid)
+        {
+            var ajx = new XMLHttpRequest();
+            ajx.open("get", "Home/States?q=" + countryid, true);
+            ajx.onreadystatechange = function ()
+            {
+                document.getElementById("abc").innerHTML = ajx.responseText;
+            }
+            ajx.send();
+        }
+        function getstate(countryid) {
+            var ajx = new XMLHttpRequest();
+            ajx.open("get", "Home/States?q=" + countryid, true);
+            ajx.onreadystatechange = function () {
+                document.getElementById("abc").innerHTML = ajx.responseText;
+            }
+            ajx.send();
+        }
+
+    </script>
+
+</div>
+<div id="abc">
+
+</div>

@@ -1,0 +1,17 @@
+﻿@model IEnumerable<PictureUploading.pictable>
+@{
+    ViewBag.Title = "Uploading";
+}
+
+<h2>Uploading</h2>
+@ViewBag.img
+
+@foreach (var img in Model)
+{
+    string[] images = img.picname.Split(',');
+    for (int i = 0; i < images.Length - 1; i++)
+    {
+        <img src="~/images/@images[i]" width="100" height="100"/>
+    }
+    <br />
+}

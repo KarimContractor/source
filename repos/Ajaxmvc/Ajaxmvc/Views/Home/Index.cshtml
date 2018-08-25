@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+
+<h2>Index</h2>
+@Ajax.ActionLink("All", "All", new AjaxOptions { HttpMethod = "get", InsertionMode = InsertionMode.Replace, UpdateTargetId = "A", })
+@Ajax.ActionLink("few3", "few3", new AjaxOptions { HttpMethod = "get", InsertionMode = InsertionMode.Replace, UpdateTargetId = "A" })
+@Ajax.ActionLink("few6", "few6", new AjaxOptions { HttpMethod = "get", InsertionMode = InsertionMode.Replace, UpdateTargetId = "A" })
+<a href="#" onclick="getdata(this.innerHTML)" value="abc">abc</a>
+<script>
+    function getdata(a)
+    {
+        var abc = new XMLHttpRequest();
+        abc.open("Get", "http://localhost:57533/home/"+a, true);
+        abc.onreadystatechange = function ()
+        {
+            document.getElementById("A").innerHTML = abc.responseText;
+        }
+        abc.send();
+    }
+
+</script>
+
+<div id="A"></div>

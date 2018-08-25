@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Encodedurl", "..\..\WebSites\Encodedurl\", "{8BF1A2B4-A1CA-47D7-88A7-6E855E3A2604}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_62446"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\WebSites\Encodedurl\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_62446\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_62446"
+		Release.AspNetCompiler.PhysicalPath = "..\..\WebSites\Encodedurl\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_62446\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "62446"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8BF1A2B4-A1CA-47D7-88A7-6E855E3A2604}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BF1A2B4-A1CA-47D7-88A7-6E855E3A2604}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9F53B6E1-5C10-4D89-9379-EBB812996449}
+	EndGlobalSection
+EndGlobal

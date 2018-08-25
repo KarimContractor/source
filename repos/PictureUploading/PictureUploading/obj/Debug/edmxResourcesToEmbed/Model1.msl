@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="uploadingModelStoreContainer" CdmEntityContainer="uploadingEntities">
+    <EntitySetMapping Name="pictables">
+      <EntityTypeMapping TypeName="uploadingModel.pictable">
+        <MappingFragment StoreEntitySet="pictable">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="picpath" ColumnName="picpath" />
+          <ScalarProperty Name="picname" ColumnName="picname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

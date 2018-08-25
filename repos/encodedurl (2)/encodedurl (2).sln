@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "encodedurl", "..\..\..\OneDrive\Documents\Visual Studio 2017\Projects\encodedurl\", "{3661D353-239A-449B-9A1B-C200CA4BA187}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_62447"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\OneDrive\Documents\Visual Studio 2017\Projects\encodedurl\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_62447\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_62447"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\OneDrive\Documents\Visual Studio 2017\Projects\encodedurl\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_62447\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "62447"
+		SlnRelativePath = "..\..\..\OneDrive\Documents\Visual Studio 2017\Projects\encodedurl\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3661D353-239A-449B-9A1B-C200CA4BA187}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3661D353-239A-449B-9A1B-C200CA4BA187}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DEF6729F-9776-4575-B859-F3F7F5A1FFAD}
+	EndGlobalSection
+EndGlobal

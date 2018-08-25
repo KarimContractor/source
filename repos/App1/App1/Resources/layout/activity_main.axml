@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:orientation="vertical"
+    p1:layout_width="match_parent"
+    p1:layout_height="match_parent"
+    p1:id="@+id/linearLayout1">
+    <HorizontalScrollView
+        p1:layout_width="match_parent"
+        p1:layout_height="0dp"
+        p1:layout_weight="1">
+        <TextView
+            p1:inputType="number"
+            p1:layout_width="wrap_content"
+            p1:layout_height="match_parent"
+            p1:padding="10dp"
+            p1:textSize="50sp"
+            p1:id="@+id/editText1"
+            p1:layout_marginRight="71.0dp" />
+    </HorizontalScrollView>
+    <android.widget.GridLayout
+        p1:layout_height="0dp"
+        p1:layout_width="match_parent"
+        p1:layout_weight="4"
+        p1:orientation="horizontal"
+        p1:rowCount="5"
+        p1:columnCount="4"
+        p1:id="@+id/Layout1">
+        <Button
+            p1:text="1"
+            p1:layout_width="0dp"
+            p1:layout_height="0dp"
+            p1:layout_rowWeight="1"
+            p1:layout_columnWeight="1"
+            p1:textSize="25dp"
+            p1:id="@+id/button1" />
+        <Button
+            p1:text="2"
+            p1:layout_width="0dp"
+            p1:layout_height="0dp"
+            p1:layout_rowWeight="1"
+            p1:layout_columnWeight="1"
+            p1:textSize="25dp"
+            p1:id="@+id/button2" />
+        <Button
+            p1:text="3"
+            p1:layout_width="0dp"
+            p1:layout_height="0dp"
+            p1:layout_rowWeight="1"
+            p1:layout_columnWeight="1"
+            p1:textSize="25dp"
+            p1:id="@+id/button3" />
+        <Button
+            p1:text="-"
+            p1:layout_width="0dp"
+            p1:layout_height="0dp"
+            p1:layout_rowWeight="1"
+            p1:layout_columnWeight="1"
+            p1:textSize="25dp"
+            p1:id="@+id/buttonsub" />
+        <Button
+            p1:text="4"
+            p1:layout_width="0dp"
+            p1:layout_height="0dp"
+            p1:layout_rowWeight="1"
+            p1:layout_columnWeight="1"
+            p1:textSize="25dp"
+            p1:id="@+id/button4" />
+        <Button
+            p1:text="5"
+            p1:layout_width="0dp"
+            p1:layout_height="0dp"
+            p1:layout_rowWeight="1"
+            p1:layout_columnWeight="1"
+            p1:textSize="25dp"
+            p1:id="@+id/button5" />
+        <Button
+            p1:text="6"
+            p1:layout_width="0dp"
+            p1:layout_height="0dp"
+            p1:layout_rowWeight="1"
+            p1:layout_columnWeight="1"
+            p1:textSize="25dp"
+            p1:id="@+id/button6" />
+        <Button
+            p1:text="+"
+            p1:layout_width="0dp"
+            p1:layout_height="0dp"
+            p1:layout_rowWeight="1"
+            p1:layout_columnWeight="1"
+            p1:textSize="25dp"
+            p1:id="@+id/buttonadd" />
+        <Button
+            p1:text="7"
+            p1:layout_width="0dp"
+            p1:layout_height="0dp"
+            p1:layout_rowWeight="1"
+            p1:layout_columnWeight="1"
+            p1:textSize="25dp"
+            p1:id="@+id/button7" />
+        <Button
+            p1:text="8"
+            p1:layout_width="0dp"
+            p1:layout_height="0dp"
+            p1:layout_rowWeight="1"
+            p1:layout_columnWeight="1"
+            p1:textSize="25dp"
+            p1:id="@+id/button8" />
+        <Button
+            p1:text="9"
+            p1:layout_width="0dp"
+            p1:layout_height="0dp"
+            p1:layout_rowWeight="1"
+            p1:layout_columnWeight="1"
+            p1:textSize="25dp"
+            p1:id="@+id/button9" />
+        <Button
+            p1:text="/"
+            p1:layout_width="0dp"
+            p1:layout_height="0dp"
+            p1:layout_rowWeight="1"
+            p1:layout_columnWeight="1"
+            p1:textSize="25dp"
+            p1:id="@+id/buttondiv" />
+        <Button
+            p1:text="."
+            p1:layout_width="0dp"
+            p1:layout_height="0dp"
+            p1:layout_rowWeight="1"
+            p1:layout_columnWeight="1"
+            p1:textSize="25dp"
+            p1:id="@+id/buttondot" />
+        <Button
+            p1:text="0"
+            p1:layout_width="0dp"
+            p1:layout_height="0dp"
+            p1:layout_rowWeight="1"
+            p1:layout_columnWeight="1"
+            p1:textSize="25dp"
+            p1:id="@+id/button0" />
+        <Button
+            p1:text="C"
+            p1:layout_width="0dp"
+            p1:layout_height="0dp"
+            p1:layout_rowWeight="1"
+            p1:layout_columnWeight="1"
+            p1:textSize="25dp"
+            p1:id="@+id/buttonc" />
+        <Button
+            p1:text="*"
+            p1:layout_width="0dp"
+            p1:layout_height="0dp"
+            p1:layout_rowWeight="1"
+            p1:layout_columnWeight="1"
+            p1:textSize="25dp"
+            p1:id="@+id/buttonmul" />
+        <Button
+            p1:text="="
+            p1:layout_width="0dp"
+            p1:layout_height="0dp"
+            p1:layout_rowWeight="1"
+            p1:layout_columnWeight="1"
+            p1:textSize="25dp"
+            p1:id="@+id/buttonequal" />
+    </android.widget.GridLayout>
+</LinearLayout>

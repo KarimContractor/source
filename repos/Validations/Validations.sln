@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Validations", "..\..\..\OneDrive\Documents\Visual Studio 2017\Projects\Validations\", "{1C50DAC5-F628-4BAE-9D63-9C4E15AEFDC2}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_50803"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\OneDrive\Documents\Visual Studio 2017\Projects\Validations\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50803\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_50803"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\OneDrive\Documents\Visual Studio 2017\Projects\Validations\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50803\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "50803"
+		SlnRelativePath = "..\..\..\OneDrive\Documents\Visual Studio 2017\Projects\Validations\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C50DAC5-F628-4BAE-9D63-9C4E15AEFDC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C50DAC5-F628-4BAE-9D63-9C4E15AEFDC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A8D75A8D-FCBA-4FAD-8842-29F9138BA6FD}
+	EndGlobalSection
+EndGlobal

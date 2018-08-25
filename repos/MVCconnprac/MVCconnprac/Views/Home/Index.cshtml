@@ -1,0 +1,41 @@
+﻿@model MVCconnprac.login
+@{
+    ViewBag.Title = "Home Page";
+}
+<script src="~/Scripts/bootstrap.js" type="text/javascript"></script>
+<script src="~/Scripts/bootstrap.min.js" type="text/javascript"></script>
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<div class=" container">
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <div class="panel ">
+                
+                
+                <div class="panel panel-primary " style="text-align:center">
+                    <div class="form-group">
+                        <h1>User Login</h1>
+                        @using (Html.BeginForm("login", "home", FormMethod.Post))
+        {
+                <table>
+                    <tr>
+                        <td>@Html.Label("UserName")</td>
+                        <td> @Html.TextBoxFor(un => un.Username,"", new { @class = "form-control" })</td>
+                    </tr>
+                    <tr>
+                        <td>@Html.Label("Password")</td>
+                        <td> @Html.PasswordFor(up => up.password,new { @class = "form-control" })</td>
+                    </tr>
+                </table>
+                <input type="submit" value="Login" class="btn-success" />
+                           @Html.ActionLink("Register", "Register", "Home");
+
+
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

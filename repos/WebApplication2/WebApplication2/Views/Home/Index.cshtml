@@ -1,0 +1,35 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.js" type="text/javascript"></script>
+    <script src="~/Scripts/bootstrap.min.js" type="text/javascript"></script>
+    <div>
+        @using (Html.BeginForm("Infoview", "Home", FormMethod.Post))
+        {
+            <label> @Html.Label("Name")</label><br />
+            @Html.TextBox("txtname")<br />
+            <label> @Html.Label("Father Name")</label><br />
+            @Html.TextBox("txtfname")<br />
+            <label> @Html.Label("CNIC")</label><br />
+            @Html.TextBox("txtcnic")<br />
+            <label> @Html.Label("Email")</label><br />
+            @Html.TextBox("txtemail")<br />
+            <label> @Html.Label("Contact Number")</label><br />
+            @Html.TextBox("txtcontact")<br />
+            <input type="submit" class="btn-success" value="Click" />
+        }
+    </div>
+</body>
+</html>
