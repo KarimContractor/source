@@ -40,7 +40,8 @@ C:\Users\contr\source\repos\MVCconnprac\MVCconnprac\bin\Microsoft.AI.DependencyC
 C:\Users\contr\source\repos\MVCconnprac\MVCconnprac\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\contr\source\repos\MVCconnprac\MVCconnprac\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\contr\source\repos\MVCconnprac\MVCconnprac\bin\Microsoft.AI.Web.xml
-C:\Users\contr\source\repos\MVCconnprac\MVCconnprac\obj\Debug\MVCconnprac.csprojResolveAssemblyReference.cache
 C:\Users\contr\source\repos\MVCconnprac\MVCconnprac\obj\Debug\MVCconnprac.csproj.CoreCompileInputs.cache
 C:\Users\contr\source\repos\MVCconnprac\MVCconnprac\obj\Debug\MVCconnprac.dll
 C:\Users\contr\source\repos\MVCconnprac\MVCconnprac\obj\Debug\MVCconnprac.pdb
+C:\Users\contr\source\repos\MVCconnprac\MVCconnprac\obj\Debug\MVCconnprac.csprojAssemblyReference.cache
+C:\Users\contr\source\repos\MVCconnprac\MVCconnprac\obj\Debug\MVCconnprac.csproj.CopyComplete

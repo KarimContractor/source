@@ -40,8 +40,9 @@ C:\Users\contr\source\repos\databaseexample\databaseexample\bin\Microsoft.AI.Dep
 C:\Users\contr\source\repos\databaseexample\databaseexample\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\contr\source\repos\databaseexample\databaseexample\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\contr\source\repos\databaseexample\databaseexample\bin\Microsoft.AI.Web.xml
-C:\Users\contr\source\repos\databaseexample\databaseexample\obj\Debug\databaseexample.csprojResolveAssemblyReference.cache
 C:\Users\contr\source\repos\databaseexample\databaseexample\obj\Debug\databaseexample.csproj.CoreCompileInputs.cache
 C:\Users\contr\source\repos\databaseexample\databaseexample\obj\Debug\databaseexample.dll
 C:\Users\contr\source\repos\databaseexample\databaseexample\obj\Debug\databaseexample.pdb
 C:\Users\contr\source\repos\databaseexample\databaseexample\bin\System.Linq.dll
+C:\Users\contr\source\repos\databaseexample\databaseexample\obj\Debug\databaseexample.csprojAssemblyReference.cache
+C:\Users\contr\source\repos\databaseexample\databaseexample\obj\Debug\databaseexample.csproj.CopyComplete
