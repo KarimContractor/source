@@ -1,0 +1,19 @@
+﻿@page ""
+
+
+
+
+<p>Use this area to provide additional information.</p>
+<h1>Counter</h1>
+<p>Current count: @currentCount</p>
+<button class="btn btn-primary" onclick="@Incrementcount">Click</button>
+@functions
+{
+    int currentCount = 0;
+
+    int Incrementcount()
+    {
+        currentCount++;
+        return 0;
+    }
+}

@@ -1,0 +1,61 @@
+﻿@model IEnumerable<WebApplication10.Models.Recivables>
+
+@{
+    <h2>Recivables List</h2>
+    Layout = "~/Views/Shared/Adminpanel.cshtml";
+}
+
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SalesID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateadd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.updatedate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SlipNo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SalesID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateadd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.updatedate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SlipNo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Recivableedt", new { id=item.Id }) |
+            
+            @Html.ActionLink("Delete", "Recivabledel", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

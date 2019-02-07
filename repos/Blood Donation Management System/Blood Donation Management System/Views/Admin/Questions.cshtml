@@ -1,0 +1,258 @@
+﻿@model Blood_Donation_Management_System.Models.Questions
+
+@{
+    ViewBag.Title = "Questions";
+}
+
+<h2>Questions</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    <h4>Questions</h4>
+    Tick If Your answer is yes
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <!--<div class="form-group flex-nowrap">
+        @Html.LabelFor(model => model.MRNo, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.MRNo, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.MRNo, "", new { @class = "text-danger" })
+        </div>
+    </div>
+        -->
+    <div class="form-group">
+        @Html.LabelFor(model => model.Inthelast3monthshaveyouhadavaccination, "In the last 3 months have you had a vaccination?", htmlAttributes: new { @class = "control-label col-md-12" })
+        <div class="col-md-10">
+            <div class="checkbox">
+                yes @Html.RadioButtonFor(model => model.Inthelast3monthshaveyouhadavaccination, true)
+                No @Html.RadioButtonFor(model => model.Inthelast3monthshaveyouhadavaccination, false)
+                @Html.ValidationMessageFor(model => model.Inthelast3monthshaveyouhadavaccination, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Inthelast6monthshaveyouconsultedadoctorforahealthproblemhadsurgeryormedicaltreatment, "In the last 6 months have you consulted a doctor for a health problem had surgery or medical treatment?", htmlAttributes: new { @class = "control-label col-md-12" })
+        <div class="col-md-10">
+            <div class="checkbox">
+                <!--Html.RadioButtonFor(model => model.blah, true) Yes
+                //Html.RadioButtonFor(model => model.blah, false) N-->
+                Yes @Html.RadioButtonFor(model => model.Inthelast6monthshaveyouconsultedadoctorforahealthproblemhadsurgeryormedicaltreatment, true)
+                No @Html.RadioButtonFor(model => model.Inthelast6monthshaveyouconsultedadoctorforahealthproblemhadsurgeryormedicaltreatment, false)
+                @Html.ValidationMessageFor(model => model.Inthelast6monthshaveyouconsultedadoctorforahealthproblemhadsurgeryormedicaltreatment, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Doyouhavediabetes, "Do you have diabetes?", htmlAttributes: new { @class = "control-label col-md-12" })
+        <div class="col-md-10">
+            <div class="checkbox">
+               Yes @Html.RadioButtonFor(model => model.Doyouhavediabetes, true)
+               No @Html.RadioButtonFor(model => model.Doyouhavediabetes, false)
+                @Html.ValidationMessageFor(model => model.Doyouhavediabetes, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Haveyoueverhadmalaria, "Have you ever had malaria?", htmlAttributes: new { @class = "control-label col-md-12" })
+        <div class="col-md-10">
+            <div class="checkbox">
+               Yes @Html.RadioButtonFor(model => model.Haveyoueverhadmalaria, true)
+               No @Html.RadioButtonFor(model => model.Haveyoueverhadmalaria, false)
+                @Html.ValidationMessageFor(model => model.Haveyoueverhadmalaria, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Haveyoueverhadkidneyorbloodproblems, "Have you ever had kidney or blood problems?", htmlAttributes: new { @class = "control-label col-md-12" })
+        <div class="col-md-10">
+            <div class="checkbox">
+               Yes @Html.RadioButtonFor(model => model.Haveyoueverhadkidneyorbloodproblems, true)
+               No @Html.RadioButtonFor(model => model.Haveyoueverhadkidneyorbloodproblems, false)
+                @Html.ValidationMessageFor(model => model.Haveyoueverhadkidneyorbloodproblems, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Haveyoueverhadproblemswithyourheartorlungs, "Have you ever had problems with your heart or lungs?", htmlAttributes: new { @class = "control-label col-md-12" })
+        <div class="col-md-10">
+            <div class="checkbox">
+               Yes @Html.RadioButtonFor(model => model.Haveyoueverhadproblemswithyourheartorlungs, true)
+               No @Html.RadioButtonFor(model => model.Haveyoueverhadproblemswithyourheartorlungs, false)
+                @Html.ValidationMessageFor(model => model.Haveyoueverhadproblemswithyourheartorlungs, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Inthelast12monthshaveyouhadclosecontactwithapersonwhohashadhepatitisoryellowjaundice, "In the last 12 months have you had close contact with a person who has had hepatitis or yellow jaundice?", htmlAttributes: new { @class = "control-label col-md-12" })
+        <div class="col-md-10">
+            <div class="checkbox">
+               Yes @Html.RadioButtonFor(model => model.Inthelast12monthshaveyouhadclosecontactwithapersonwhohashadhepatitisoryellowjaundice, true)
+               No @Html.RadioButtonFor(model => model.Inthelast12monthshaveyouhadclosecontactwithapersonwhohashadhepatitisoryellowjaundice, false)
+                @Html.ValidationMessageFor(model => model.Inthelast12monthshaveyouhadclosecontactwithapersonwhohashadhepatitisoryellowjaundice, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Haveyoueverhadepilepsyorfainting, "Have you ever had epilepsy or fainting?", htmlAttributes: new { @class = "control-label col-md-12" })
+        <div class="col-md-10">
+            <div class="checkbox">
+               Yes @Html.RadioButtonFor(model => model.Haveyoueverhadepilepsyorfainting, true)
+               No @Html.RadioButtonFor(model => model.Haveyoueverhadepilepsyorfainting, false)
+                @Html.ValidationMessageFor(model => model.Haveyoueverhadepilepsyorfainting, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Haveyoueverhadacomaorstroke, "Have you ever had a coma or stroke?", htmlAttributes: new { @class = "control-label col-md-12" })
+        <div class="col-md-10">
+            <div class="checkbox">
+               Yes @Html.RadioButtonFor(model => model.Haveyoueverhadacomaorstroke, true)
+               No @Html.RadioButtonFor(model => model.Haveyoueverhadacomaorstroke, false)
+                @Html.ValidationMessageFor(model => model.Haveyoueverhadacomaorstroke, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Haveyoueverhadcancer, "Have you ever had cancer?", htmlAttributes: new { @class = "control-label col-md-12" })
+        <div class="col-md-10">
+            <div class="checkbox">
+               Yes @Html.RadioButtonFor(model => model.Haveyoueverhadcancer, true)
+               No @Html.RadioButtonFor(model => model.Haveyoueverhadcancer, false)
+                @Html.ValidationMessageFor(model => model.Haveyoueverhadcancer, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Inthelast12monthshaveyouhadagraft, "In the last 12 months have you had a graft?", htmlAttributes: new { @class = "control-label col-md-12" })
+        <div class="col-md-10">
+            <div class="checkbox">
+               Yes @Html.RadioButtonFor(model => model.Inthelast12monthshaveyouhadagraft, true)
+               No @Html.RadioButtonFor(model => model.Inthelast12monthshaveyouhadagraft, false)
+                @Html.ValidationMessageFor(model => model.Inthelast12monthshaveyouhadagraft, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.HaveyoueverhadCrohnsdisease, "Have you ever had Crohns disease?", htmlAttributes: new { @class = "control-label col-md-12" })
+        <div class="col-md-10">
+            <div class="checkbox">
+               Yes @Html.RadioButtonFor(model => model.HaveyoueverhadCrohnsdisease, true)
+               No @Html.RadioButtonFor(model => model.HaveyoueverhadCrohnsdisease, false)
+                @Html.ValidationMessageFor(model => model.HaveyoueverhadCrohnsdisease, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Haveyoueverreceivedaduramaterbraincoveringgraft, "Have you ever received a duramater (brain covering) graft?", htmlAttributes: new { @class = "control-label col-md-12" })
+        <div class="col-md-10">
+            <div class="checkbox">
+               Yes @Html.RadioButtonFor(model => model.Haveyoueverreceivedaduramaterbraincoveringgraft, true)
+               No @Html.RadioButtonFor(model => model.Haveyoueverreceivedaduramaterbraincoveringgraft, false)
+                @Html.ValidationMessageFor(model => model.Haveyoueverreceivedaduramaterbraincoveringgraft, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.HaveyoueverhadapositivetestfortheHIVAIDSvirus, "Have you ever had a positive test for the HIV/AIDS virus?", htmlAttributes: new { @class = "control-label col-md-12" })
+        <div class="col-md-10">
+            <div class="checkbox">
+               Yes @Html.RadioButtonFor(model => model.HaveyoueverhadapositivetestfortheHIVAIDSvirus, true)
+               No @Html.RadioButtonFor(model => model.HaveyoueverhadapositivetestfortheHIVAIDSvirus, false)
+                @Html.ValidationMessageFor(model => model.HaveyoueverhadapositivetestfortheHIVAIDSvirus, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Inthelast6monthshaveyoureceivedbloodorbloodproducts, "In the last 6 months have you received blood or blood products?", htmlAttributes: new { @class = "control-label col-md-12" })
+        <div class="col-md-10">
+            <div class="checkbox">
+               Yes @Html.RadioButtonFor(model => model.Inthelast6monthshaveyoureceivedbloodorbloodproducts, true)
+               No @Html.RadioButtonFor(model => model.Inthelast6monthshaveyoureceivedbloodorbloodproducts, false)
+                @Html.ValidationMessageFor(model => model.Inthelast6monthshaveyoureceivedbloodorbloodproducts, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Inthelast6monthshaveyouhadhepatitis, "In the last 6 months have you had hepatitis?", htmlAttributes: new { @class = "control-label col-md-12" })
+        <div class="col-md-10">
+            <div class="checkbox">
+               Yes @Html.RadioButtonFor(model => model.Inthelast6monthshaveyouhadhepatitis,true)
+               No @Html.RadioButtonFor(model => model.Inthelast6monthshaveyouhadhepatitis,false)
+                @Html.ValidationMessageFor(model => model.Inthelast6monthshaveyouhadhepatitis, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Inthelast3monthshaveyouhadskinorearpiercing, "In the last 3 months have you had skin or ear piercing?", htmlAttributes: new { @class = "control-label col-md-12" })
+        <div class="col-md-10">
+            <div class="checkbox">
+               Yes @Html.RadioButtonFor(model => model.Inthelast3monthshaveyouhadskinorearpiercing, true)
+               No @Html.RadioButtonFor(model => model.Inthelast3monthshaveyouhadskinorearpiercing, false)
+                @Html.ValidationMessageFor(model => model.Inthelast3monthshaveyouhadskinorearpiercing, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Inthelast3monthshaveyouhadatattoo, "In the last 3 months have you had a tattoo?", htmlAttributes: new { @class = "control-label col-md-12" })
+        <div class="col-md-10">
+            <div class="checkbox">
+               Yes @Html.RadioButtonFor(model => model.Inthelast3monthshaveyouhadatattoo, true)
+               No @Html.RadioButtonFor(model => model.Inthelast3monthshaveyouhadatattoo, false)
+                @Html.ValidationMessageFor(model => model.Inthelast3monthshaveyouhadatattoo, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Inthelast6monthshaveyouhadelectrolysis, "In the last 6 months have you had electrolysis?", htmlAttributes: new { @class = "control-label col-md-12" })
+        <div class="col-md-10">
+            <div class="checkbox">
+                Yes @Html.RadioButtonFor(model => model.Inthelast6monthshaveyouhadelectrolysis, true)
+               No @Html.RadioButtonFor(model => model.Inthelast6monthshaveyouhadelectrolysis, false)
+                @Html.ValidationMessageFor(model => model.Inthelast6monthshaveyouhadelectrolysis, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Inthelast12monthshaveyoubeeninjailorprison, "In the last 12 months have you been in jail or prison?", htmlAttributes: new { @class = "control-label col-md-12" })
+        <div class="col-md-10">
+            <div class="checkbox">
+               Yes @Html.RadioButtonFor(model => model.Inthelast12monthshaveyoubeeninjailorprison, true)
+               No @Html.RadioButtonFor(model => model.Inthelast12monthshaveyoubeeninjailorprison, false)
+                @Html.ValidationMessageFor(model => model.Inthelast12monthshaveyoubeeninjailorprison, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

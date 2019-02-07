@@ -40,7 +40,8 @@ C:\Users\contr\source\repos\PictureUploading\PictureUploading\bin\Microsoft.AI.D
 C:\Users\contr\source\repos\PictureUploading\PictureUploading\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\contr\source\repos\PictureUploading\PictureUploading\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\contr\source\repos\PictureUploading\PictureUploading\bin\Microsoft.AI.Web.xml
-C:\Users\contr\source\repos\PictureUploading\PictureUploading\obj\Debug\PictureUploading.csprojResolveAssemblyReference.cache
 C:\Users\contr\source\repos\PictureUploading\PictureUploading\obj\Debug\PictureUploading.csproj.CoreCompileInputs.cache
 C:\Users\contr\source\repos\PictureUploading\PictureUploading\obj\Debug\PictureUploading.dll
 C:\Users\contr\source\repos\PictureUploading\PictureUploading\obj\Debug\PictureUploading.pdb
+C:\Users\contr\source\repos\PictureUploading\PictureUploading\obj\Debug\PictureUploading.csprojAssemblyReference.cache
+C:\Users\contr\source\repos\PictureUploading\PictureUploading\obj\Debug\PictureUploading.csproj.CopyComplete

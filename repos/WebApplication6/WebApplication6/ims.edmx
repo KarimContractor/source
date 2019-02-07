@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="imsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="batch">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Teacherid" Type="int" />
+        </EntityType>
+        <EntityType Name="batchstudents">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="batchid" Type="int" />
+          <Property Name="studentid" Type="int" />
+        </EntityType>
+        <EntityType Name="student">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Fname" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="teacher">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK__batch__Teacherid__3B75D760">
+          <End Role="teacher" Type="Self.teacher" Multiplicity="0..1" />
+          <End Role="batch" Type="Self.batch" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="teacher">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="batch">
+              <PropertyRef Name="Teacherid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__batchstud__batch__3E52440B">
+          <End Role="batch" Type="Self.batch" Multiplicity="0..1" />
+          <End Role="batchstudents" Type="Self.batchstudents" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="batch">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="batchstudents">
+              <PropertyRef Name="batchid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__batchstud__stude__3F466844">
+          <End Role="student" Type="Self.student" Multiplicity="0..1" />
+          <End Role="batchstudents" Type="Self.batchstudents" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="student">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="batchstudents">
+              <PropertyRef Name="studentid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="imsModelStoreContainer">
+          <EntitySet Name="batch" EntityType="Self.batch" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="batchstudents" EntityType="Self.batchstudents" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="student" EntityType="Self.student" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="teacher" EntityType="Self.teacher" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__batch__Teacherid__3B75D760" Association="Self.FK__batch__Teacherid__3B75D760">
+            <End Role="teacher" EntitySet="teacher" />
+            <End Role="batch" EntitySet="batch" />
+          </AssociationSet>
+          <AssociationSet Name="FK__batchstud__batch__3E52440B" Association="Self.FK__batchstud__batch__3E52440B">
+            <End Role="batch" EntitySet="batch" />
+            <End Role="batchstudents" EntitySet="batchstudents" />
+          </AssociationSet>
+          <AssociationSet Name="FK__batchstud__stude__3F466844" Association="Self.FK__batchstud__stude__3F466844">
+            <End Role="student" EntitySet="student" />
+            <End Role="batchstudents" EntitySet="batchstudents" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="imsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="batch">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Teacherid" Type="Int32" />
+          <NavigationProperty Name="teacher" Relationship="Self.FK__batch__Teacherid__3B75D760" FromRole="batch" ToRole="teacher" />
+          <NavigationProperty Name="batchstudents" Relationship="Self.FK__batchstud__batch__3E52440B" FromRole="batch" ToRole="batchstudents" />
+        </EntityType>
+        <EntityType Name="batchstudent">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="batchid" Type="Int32" />
+          <Property Name="studentid" Type="Int32" />
+          <NavigationProperty Name="batch" Relationship="Self.FK__batchstud__batch__3E52440B" FromRole="batchstudents" ToRole="batch" />
+          <NavigationProperty Name="student" Relationship="Self.FK__batchstud__stude__3F466844" FromRole="batchstudents" ToRole="student" />
+        </EntityType>
+        <EntityType Name="student">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="batchstudents" Relationship="Self.FK__batchstud__stude__3F466844" FromRole="student" ToRole="batchstudents" />
+        </EntityType>
+        <EntityType Name="teacher">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="batches" Relationship="Self.FK__batch__Teacherid__3B75D760" FromRole="teacher" ToRole="batch" />
+        </EntityType>
+        <Association Name="FK__batch__Teacherid__3B75D760">
+          <End Role="teacher" Type="Self.teacher" Multiplicity="0..1" />
+          <End Role="batch" Type="Self.batch" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="teacher">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="batch">
+              <PropertyRef Name="Teacherid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__batchstud__batch__3E52440B">
+          <End Role="batch" Type="Self.batch" Multiplicity="0..1" />
+          <End Role="batchstudents" Type="Self.batchstudent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="batch">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="batchstudents">
+              <PropertyRef Name="batchid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__batchstud__stude__3F466844">
+          <End Role="student" Type="Self.student" Multiplicity="0..1" />
+          <End Role="batchstudents" Type="Self.batchstudent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="student">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="batchstudents">
+              <PropertyRef Name="studentid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="imsEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="batches" EntityType="Self.batch" />
+          <EntitySet Name="batchstudents" EntityType="Self.batchstudent" />
+          <EntitySet Name="students" EntityType="Self.student" />
+          <EntitySet Name="teachers" EntityType="Self.teacher" />
+          <AssociationSet Name="FK__batch__Teacherid__3B75D760" Association="Self.FK__batch__Teacherid__3B75D760">
+            <End Role="teacher" EntitySet="teachers" />
+            <End Role="batch" EntitySet="batches" />
+          </AssociationSet>
+          <AssociationSet Name="FK__batchstud__batch__3E52440B" Association="Self.FK__batchstud__batch__3E52440B">
+            <End Role="batch" EntitySet="batches" />
+            <End Role="batchstudents" EntitySet="batchstudents" />
+          </AssociationSet>
+          <AssociationSet Name="FK__batchstud__stude__3F466844" Association="Self.FK__batchstud__stude__3F466844">
+            <End Role="student" EntitySet="students" />
+            <End Role="batchstudents" EntitySet="batchstudents" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="imsModelStoreContainer" CdmEntityContainer="imsEntities1">
+          <EntitySetMapping Name="batches">
+            <EntityTypeMapping TypeName="imsModel.batch">
+              <MappingFragment StoreEntitySet="batch">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Teacherid" ColumnName="Teacherid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="batchstudents">
+            <EntityTypeMapping TypeName="imsModel.batchstudent">
+              <MappingFragment StoreEntitySet="batchstudents">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="batchid" ColumnName="batchid" />
+                <ScalarProperty Name="studentid" ColumnName="studentid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="students">
+            <EntityTypeMapping TypeName="imsModel.student">
+              <MappingFragment StoreEntitySet="student">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Fname" ColumnName="Fname" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="teachers">
+            <EntityTypeMapping TypeName="imsModel.teacher">
+              <MappingFragment StoreEntitySet="teacher">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

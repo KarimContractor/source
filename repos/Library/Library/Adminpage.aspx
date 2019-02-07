@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Adminpage.aspx.cs" Inherits="Library.Adminpage" %>
-
+<%@ OutputCache Duration="30" VaryByParam="none" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -42,5 +42,6 @@
         <asp:GridView ID="GridView1" runat="server" Height="229px" Width="959px">
         </asp:GridView>
     </form>
+    <asp:label ID="lbltime" runat="server"></asp:label>
 </body>
 </html>

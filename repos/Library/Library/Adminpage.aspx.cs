@@ -17,8 +17,8 @@ namespace Library
         ELibraryEntities el = new ELibraryEntities();
         protected void Page_Load(object sender, EventArgs e)
         {
+            lbltime.Text = System.DateTime.Now.ToString();
             
-
            var a= Request.QueryString["userid"];
             if (a == null)
             {
