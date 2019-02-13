@@ -96,6 +96,12 @@ namespace Blood_Donation_Management_System.Controllers
 
                 con.Questions.Add(q);
                 con.SaveChangesAsync();
+                BloodCollected bc = new BloodCollected();
+                bc.MRNo = q.MRNo;
+                
+                bc.takentime = DateTime.Now.ToLocalTime();
+                bc.expires = DateTime.Now.ToLocalTime().AddDays(40);
+                con.BloodCollecteds.Add(bc);
                 return RedirectToAction("Registerdlist", controllerName:"Admin");
             }
             return View();

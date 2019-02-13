@@ -41,12 +41,12 @@ namespace TaxiFarePrediction
             var model = Train(mlContext, _trainDataPath);
             Evaluate(mlContext, model);
             TestSinglePrediction(mlContext);
-            
+            Console.ReadKey();
         }
         public static ITransformer Train(MLContext mlContext, string dataPath)
         {
             IDataView dataView = _textLoader.Read(dataPath);
-            var pipeline = mlContext.Transforms.CopyColumns("FareAmount", "Label")
+            var pipeline = mlContext.Transforms.CopyColumns( "Label", "FareAmount")
                 .Append(mlContext.Transforms.Categorical.OneHotEncoding("VendorId"))
 .Append(mlContext.Transforms.Categorical.OneHotEncoding("RateCode"))
 .Append(mlContext.Transforms.Categorical.OneHotEncoding("PaymentType"))
@@ -80,9 +80,9 @@ namespace TaxiFarePrediction
             {
                 VendorId = "VTS",
                 RateCode = "1",
-                PassengerCount = 1,
+                PassengerCount = 2,
                 TripTime = 1140,
-                TripDistance = 3.75f,
+                TripDistance = 5.75f,
                 PaymentType = "CRD",
                 FareAmount = 0 // To predict. Actual/Observed = 15.5
             };

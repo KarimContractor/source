@@ -13,7 +13,7 @@ namespace Blood_Donation_Management_System.Models
         public DbSet<Logs> Log { get; set; }
         public DbSet<Tests> Test { get; set; }
         public DbSet<BloodCollected> BloodCollecteds { get; set; }
-
-        public System.Data.Entity.DbSet<Blood_Donation_Management_System.Models.Questions> Questions { get; set; }
+        public DbSet<Questions> Questions { get; set; }
+        public DbSet<BloodStock> bloodStocks { get; set; }
     }
 }

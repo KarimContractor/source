@@ -3,6 +3,6 @@
   <PropertyGroup>
     <SelectedDevice>Genymotion Google Pixel 2 - 8.0 - API 26 - 1080x1920</SelectedDevice>
     <AndroidDesignerPreferredDevice>pixel_xl</AndroidDesignerPreferredDevice>
-    <AndroidDesignerPreferredTheme>AppTheme</AndroidDesignerPreferredTheme>
+    <AndroidDesignerPreferredTheme>Theme.DeviceDefault</AndroidDesignerPreferredTheme>
   </PropertyGroup>
 </Project>

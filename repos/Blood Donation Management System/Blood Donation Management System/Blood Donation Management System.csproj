@@ -228,10 +228,11 @@
     <Content Include="Views\Admin\Register.cshtml" />
     <Content Include="Views\Admin\Questions.cshtml" />
     <Content Include="Views\Admin\Registerdlist.cshtml" />
+    <Content Include="Views\Inhouse\BloodDetails.cshtml" />
+    <Content Include="Views\Inhouse\Tests.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Inhouse\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

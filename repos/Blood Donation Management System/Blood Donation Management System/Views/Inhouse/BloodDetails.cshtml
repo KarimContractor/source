@@ -1,0 +1,38 @@
+﻿@model Blood_Donation_Management_System.Models.BloodCollected
+
+@{
+    ViewBag.Title = "BloodDetails";
+}
+
+<h2>BloodDetails</h2>
+
+<div>
+    <h4>BloodCollected</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MRNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MRNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.takentime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.takentime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.expires)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.expires)
+        </dd>
+
+    </dl>
+</div>
