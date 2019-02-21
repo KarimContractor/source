@@ -10,7 +10,7 @@ namespace Blood_Donation_Management_System.Models
         public int Id { get; set; }
         public int MRNo { get; set; }
         public DateTime takentime { get; set; }
-        public DateTime expires { get; set; }
-        public ICollection<Tests> test { get; set; }
+        public DateTime  expires { get; set; }
+       // public ICollection<Tests> test { get; set; }
     }
 }

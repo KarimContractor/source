@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Inventory_Mangement_System.Models;
@@ -38,7 +39,7 @@ namespace Inventory_Mangement_System.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult CheckOutinfo(Order od)
+        public async Task<ActionResult> CheckOutinfo(Order od)
         {
             if (TryValidateModel(od))
             {
@@ -56,7 +57,7 @@ namespace Inventory_Mangement_System.Controllers
                 or.Total = Gettotal();
 
                 con.Orders.Add(or);
-                con.SaveChanges();
+               await con.SaveChangesAsync();
                 TempData["orderid"] = or.OrderId;
                
                 return RedirectToAction(actionName:"Orderdetail",controllerName:"Home");

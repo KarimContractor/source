@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Blood_Donation_Management_System.Models;
@@ -20,19 +22,21 @@ namespace Blood_Donation_Management_System.Controllers
         }
 
         [HttpPost]
-        public ActionResult Login(Logs lg)
+        public async Task<ActionResult> Login(Logs lg)
         {
-                var a = (from abc in con.Log where abc.UserName.Equals(lg.UserName) && abc.Password.Equals(lg.Password) select abc).FirstOrDefault();
+                var a =await (from abc in con.Log where abc.UserName.Equals(lg.UserName) && abc.Password.Equals(lg.Password) select abc).FirstOrDefaultAsync();
                 if (a != null)
                 {
                 if (a.Previlage.Equals("Admin"))
                 {
                     TempData["id"] = a.Id;
-                    return RedirectToAction("Register", controllerName: "Admin");
+                    Session["key"] = a.Id;
+                    return RedirectToAction("Index", controllerName: "Admin");
                 }
                 else if (a.Previlage.Equals("Inhouse"))
                 {
-                    TempData["id"] = a.Id;
+                    //TempData["id"] = a.Id;
+                    Session["in"] = a.Id;
                     return RedirectToAction("Index", controllerName: "Inhouse");
                 }
                 else

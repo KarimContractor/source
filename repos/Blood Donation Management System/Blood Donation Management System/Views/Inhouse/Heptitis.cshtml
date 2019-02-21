@@ -1,0 +1,177 @@
+﻿
+
+<h2>Heptitis</h2>
+
+<h2>Bloodgroup</h2>
+@model Blood_Donation_Management_System.Models.Tests
+
+@{
+    ViewBag.Title = "Heptitis";
+    Layout = "~/Views/Shared/Inhouselayout.cshtml";
+}
+
+
+<h2>Tests</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal col-lg-5">
+        <h4>Tests</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <!-- <div class="form-group">
+             @Html.LabelFor(model => model.MRno, htmlAttributes: new { @class = "control-label col-md-10" })
+             <div class="col-md-10">
+                 @Html.EditorFor(model => model.MRno, new { htmlAttributes = new { @class = "form-control" } })
+                 @Html.ValidationMessageFor(model => model.MRno, "", new { @class = "text-danger" })
+             </div>
+         </div>
+            
+        <div class="form-group">
+            @Html.LabelFor(model => model.BloodGroup, "Blood Group", htmlAttributes: new { @class = "control-label col-lg-5" })
+            <div class="col-lg-5">
+                @Html.EditorFor(model => model.BloodGroup, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.BloodGroup, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.RH, "Rhesus", htmlAttributes: new { @class = "control-label col-lg-5" })
+            <div class="col-lg-5">
+                <div class="checkbox">
+                    Positive  @Html.RadioButtonFor(model => model.RH, true)
+                    Negative @Html.RadioButtonFor(model => model.RH, false)
+                    @Html.ValidationMessageFor(model => model.RH, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.BloodAntiBodies, "Blood AntiBodies", htmlAttributes: new { @class = "control-label col-lg-5" })
+            <div class="col-lg-5">
+                @Html.EditorFor(model => model.BloodAntiBodies, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.BloodAntiBodies, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <!--
+        <div class="form-group">
+            @Html.LabelFor(model => model.HIV1, "Human immunodeficiency virus 1", htmlAttributes: new { @class = "control-label col-md-10" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    Positive @Html.RadioButtonFor(model => model.HIV1, true)
+                    Negative @Html.RadioButtonFor(model => model.HIV1, false)
+                    @Html.ValidationMessageFor(model => model.HIV1, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.HIV2, "Human immunodeficiency virus 2", htmlAttributes: new { @class = "control-label col-md-10" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    Positive @Html.RadioButtonFor(model => model.HIV2, true)
+                    Negative @Html.RadioButtonFor(model => model.HIV2, false)
+                    @Html.ValidationMessageFor(model => model.HIV2, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.HTLV1, "Human T-lymphotropic virus 1", htmlAttributes: new { @class = "control-label col-md-10" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    Positive @Html.RadioButtonFor(model => model.HTLV1, true)
+                    Negative @Html.RadioButtonFor(model => model.HTLV1, false)
+                    @Html.ValidationMessageFor(model => model.HTLV1, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.HTLV2, " Human T-lymphotropic virus 2", htmlAttributes: new { @class = "control-label col-md-10" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    Positive @Html.RadioButtonFor(model => model.HTLV1, true)
+                    Negative @Html.RadioButtonFor(model => model.HTLV1, false)
+                    @Html.ValidationMessageFor(model => model.HTLV2, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+            -->
+        <div class="form-group">
+            @Html.LabelFor(model => model.HeptitisB, "Hepatitis B", htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-10"style="margin-left:25%">
+                <div class="checkbox">
+                    Positive @Html.RadioButtonFor(model => model.HeptitisB, true)
+                    Negative @Html.RadioButtonFor(model => model.HeptitisB, false)
+                    @Html.ValidationMessageFor(model => model.HeptitisB, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.HeptitisC, "Hepatitis C", htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-10" style="margin-left:25%">
+                <div class="checkbox">
+                    Positive @Html.RadioButtonFor(model => model.HeptitisC, true)
+                    Negative @Html.RadioButtonFor(model => model.HeptitisC, false)
+                    @Html.ValidationMessageFor(model => model.HeptitisC, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <!--
+        <div class="form-group">
+            @Html.LabelFor(model => model.SyphilisTreponemapallidum, "Syphilis Treponema Pallidum", htmlAttributes: new { @class = "control-label col-md-10" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    Positive @Html.RadioButtonFor(model => model.SyphilisTreponemapallidum, true)
+                    Negative @Html.RadioButtonFor(model => model.SyphilisTreponemapallidum, false)
+                    @Html.ValidationMessageFor(model => model.SyphilisTreponemapallidum, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.WestNileVirus, "West Nile Virus", htmlAttributes: new { @class = "control-label col-md-10" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    Positive @Html.RadioButtonFor(model => model.WestNileVirus, true)
+                    Negative @Html.RadioButtonFor(model => model.WestNileVirus, false)
+                    @Html.ValidationMessageFor(model => model.WestNileVirus, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ChagasdiseaseTrypanosomacruzi, "Chagas Disease Trypanosoma Cruzi", htmlAttributes: new { @class = "control-label col-md-10" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    Positive @Html.RadioButtonFor(model => model.ChagasdiseaseTrypanosomacruzi, true)
+                    Negative @Html.RadioButtonFor(model => model.ChagasdiseaseTrypanosomacruzi, false)
+                    @Html.ValidationMessageFor(model => model.ChagasdiseaseTrypanosomacruzi, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Cytomegalovirus, "Cytomegalo Virus", htmlAttributes: new { @class = "control-label col-md-10" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    Positive @Html.RadioButtonFor(model => model.Cytomegalovirus, true)
+                    Negative @Html.RadioButtonFor(model => model.Cytomegalovirus, false)
+                    @Html.ValidationMessageFor(model => model.Cytomegalovirus, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+            -->
+        <div class="form-group">
+            <div class="col-md-offset-8 col-md-8">
+                <input type="submit" value="Submit" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+

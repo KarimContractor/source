@@ -21,7 +21,7 @@
                 @Html.ValidationMessageFor(model => model.MRno, "", new { @class = "text-danger" })
             </div>
         </div>
-           -->
+           
         <div class="form-group">
             @Html.LabelFor(model => model.BloodGroup,"Blood Group", htmlAttributes: new { @class = "control-label col-md-10" })
             <div class="col-md-10">
@@ -114,7 +114,7 @@
                 </div>
             </div>
         </div>
-
+        -->
         <div class="form-group">
             @Html.LabelFor(model => model.SyphilisTreponemapallidum, "Syphilis Treponema Pallidum", htmlAttributes: new { @class = "control-label col-md-10" })
             <div class="col-md-10">
@@ -166,7 +166,3 @@
         </div>
     </div>
 }
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>

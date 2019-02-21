@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Blood_Donation_Management_System.Models.BloodCollected>
+
+@{
+    ViewBag.Title = "Stock";
+    Layout = "~/Views/Shared/_Layout-Copy.cshtml";
+}
+
+<h2>Stock</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MRNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.takentime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.expires)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MRNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.takentime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.expires)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

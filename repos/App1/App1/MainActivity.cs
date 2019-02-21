@@ -58,7 +58,7 @@ namespace App1
 
         private void Button0_Click(object sender, System.EventArgs e)
         {
-            editText.SetText(0);
+            editText.Append("0");
             //throw new System.NotImplementedException();
         }
 
@@ -132,56 +132,56 @@ namespace App1
        
         private void Button9_Click(object sender, System.EventArgs e)
         {
-            editText.Text += "9";
+            editText.Append("9");
             //throw new System.NotImplementedException();
         }
 
         private void Button8_Click(object sender, System.EventArgs e)
         {
-            editText.Text += "8";
+            editText.Append("8");
             //throw new System.NotImplementedException();
         }
 
         private void Button7_Click(object sender, System.EventArgs e)
         {
-            editText.Text += "7";
+            editText.Append("7");
             //throw new System.NotImplementedException();
         }
 
         private void Button6_Click(object sender, System.EventArgs e)
         {
-            editText.Text += "6";
+            editText.Append("6");
             //throw new System.NotImplementedException();
         }
 
         private void Button5_Click(object sender, System.EventArgs e)
         {
-            editText.Text += "5";
+            editText.Append("5");
             //throw new System.NotImplementedException();
         }
 
         private void Button4_Click(object sender, System.EventArgs e)
         {
-            editText.Text += "4";
+            editText.Append("4");
             //throw new System.NotImplementedException();
         }
 
         private void Button3_Click(object sender, System.EventArgs e)
         {
-            editText.Text += "3";
+            editText.Append("3");
             //throw new System.NotImplementedException();
         }
 
         private void Button2_Click(object sender, System.EventArgs e)
         {
-            editText.Text += "2";
+            editText.Append("2");
             //throw new System.NotImplementedException();
         }
 
         private void Button1_Click(object sender, System.EventArgs e)
         {
             Toast.MakeText(this, "Hello from ", ToastLength.Long).Show();
-            editText.Text += "1";
+            editText.Append("1");
             //throw new System.NotImplementedException();
         }
 
